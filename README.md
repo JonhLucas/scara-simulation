@@ -12,6 +12,8 @@ Este projeto tem como objetivo criar uma simulação interativa de um robô SCAR
 - Estudar cinemática direta e inversa
 - Experimentar trajetórias e posicionamento
 
+  [▶️ Ver demonstração](https://www.youtube.com/watch?v=LEkecfbkOco)
+
 ---
 
 ## 🚀 Funcionalidades
@@ -21,14 +23,6 @@ Este projeto tem como objetivo criar uma simulação interativa de um robô SCAR
 - ✔️ Cinemática inversa (Inverse Kinematics)  
 - ✔️ Simulação de movimento  
 - ✔️ Visualização (2D ou 3D, dependendo da implementação)  
-
----
-
-## 🛠️ Tecnologias utilizadas
-
-- Python (NumPy / opencv)  
-- ROS2
-- CoppeliaSim
 
 ---
 
@@ -42,3 +36,35 @@ scara-simulation/
 ├── scara_ros/                   # ROS packages
 ├── requiremnts.txt
 └── README.md
+
+```
+## 📋 Requisitos
+
+Antes de executar o projeto, certifique-se de que os seguintes requisitos estão atendidos:
+
+### 🧰 Software
+
+- CoppeliaSim
+  - Instalado e configurado com suporte à API Python (Remote API / ZMQ)
+  - Certifique-se de que o interpretador Python esteja corretamente vinculado
+
+- Python >= 3.12  
+  - Recomenda-se uso de ambiente virtual (`venv`)
+
+- ROS2 JAZZY
+  - Instalado e configurado corretamente no sistema  
+  - Workspace inicializado (ex: `ros2_ws`)
+
+---
+
+### 📦 Dependências Python
+
+As bibliotecas Python utilizadas no projeto estão listadas no arquivo `requirements.txt`.
+
+Para instalar todas as dependências, execute:
+
+```bash
+pip install -r requirements.txt
+```
+
+

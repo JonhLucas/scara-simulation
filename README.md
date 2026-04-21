@@ -66,5 +66,33 @@ Para instalar todas as dependências, execute:
 ```bash
 pip install -r requirements.txt
 ```
+## ▶️ Inicialização do Sistema
 
+Siga a sequência abaixo para iniciar corretamente a simulação do robô SCARA.
 
+---
+
+### 1. 🔧 Compilar o workspace ROS 2
+
+No diretório do workspace:
+
+```bash
+colcon build
+```
+### 2. 🔄 Carregar o ambiente
+```bash
+source ~/<ros_ws>/install/setup.bash
+```
+### 3. 🤖 Executar os nós do ROS 2
+
+Inicie os nós responsáveis pela simulação:
+```bash
+ros2 run vision vision
+ros2 run conveyor_wrapper conveyor_bringup
+ros2 run scara_supervisor run_supervisor
+ros2 run scara_wrapper scara_bringup
+```
+### 4. 🎮 Iniciar a cena no CoppeliaSim
+  - Abra o CoppeliaSim
+  - Carregue a cena do projeto (.ttt ou .ttm)
+  - Clique em Play para iniciar a simulação
